@@ -38,7 +38,7 @@ em { color: var(--orange); font-style: normal; }
 h2 { font-size: clamp(3rem, 7vw, 7.5rem); line-height: .9; font-weight: 600; }
 .project-feature { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); gap: 7vw; align-items: center; }
 .project-visual { min-height: 620px; background: #262322; color: #f2eee6; position: relative; overflow: hidden; display: grid; place-items: center; isolation: isolate; }
-.project-visual::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(15, 32, 37, .08), rgba(15, 32, 37, .68)); }
+.project-visual::before, .project-visual::after { content: none; display: none; }
 .tennis-photo { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.85) contrast(1.05); transition: transform .7s ease; }
 .project-visual:hover .tennis-photo { transform: scale(1.04); }
 .perfume-bottle { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; transform: rotate(7deg); filter: drop-shadow(25px 25px 20px rgba(0,0,0,.35)); }
