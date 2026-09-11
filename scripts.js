@@ -15,14 +15,6 @@ if (reducedMotion) {
     revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-const cursorGlow = document.querySelector('.cursor-glow');
-if (cursorGlow && !reducedMotion && window.matchMedia('(pointer: fine)').matches) {
-    window.addEventListener('pointermove', (event) => {
-        cursorGlow.style.left = `${event.clientX}px`;
-        cursorGlow.style.top = `${event.clientY}px`;
-    }, { passive: true });
-}
-
 const aboutSection = document.querySelector('.about-section');
 const aboutCube = document.querySelector('.cube');
 if (aboutSection && aboutCube && !reducedMotion) {
